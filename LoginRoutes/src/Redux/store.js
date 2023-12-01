@@ -1,10 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import loginSlicer from "./reducers/index.js";
+import authReducer from "./auth/authSlice";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
-    arranca: loginSlicer,
+    auth: authReducer,
   },
 });
-
-export default store;
